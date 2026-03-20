@@ -34,7 +34,9 @@ Log in as `admin@crank.com` to access the Admin Dashboard.
 
 * **Dashboard & Charts:** View the yearly sales bar chart and the product distribution pie chart.
 * **Product Management (CRUD):** Use the interactive Datatable to search and sort products. You can add new products, upload multiple photos (or a single photo), and set main images.
-* **Excel Import:** On the Products page, use the Import form to upload an `.xlsx` or `.csv` file to bulk-add products.
+* **Excel Import:** Bulk-add products by uploading a `.xlsx` or `.csv` file on the Products page.
+  * **File Formatting:** Row 1 must contain exactly these headers (lowercase): `name`, `description`, `price`, `stock`, `category_id`, `brand_id`.
+  * **Crucial Note:** The `category_id` and `brand_id` columns must contain numeric IDs (e.g., `1`, `2`) corresponding to existing categories and brands in the system, NOT text names like "Trek" or "Mountain Bikes".
 * **User Management:** Use the Users Datatable to view all registered accounts. Click "Edit User" to change a customer's role to Admin, or toggle their status to Inactive (preventing them from logging in).
 * **Transaction & Email Receipts:** View customer orders. When you update a transaction status (e.g., to "Completed"), the system automatically emails the customer a PDF receipt using Mailtrap.
 * **Review Moderation:** Access the Reviews datatable to monitor all product feedback and delete inappropriate comments.
